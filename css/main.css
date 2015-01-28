@@ -107,7 +107,7 @@ textarea {
     position: relative;
     color: purple;
 }
-#projects{
+#pinpoint{
     z-index: 600;
     position: relative;
     left: 8em;
@@ -135,8 +135,8 @@ textarea {
 #contact{
     z-index: 200;
     position: relative;
-    left: 15em;
-    bottom: 12em;
+    left: 20em;
+    bottom: 15em;
 }
 span:hover{
     color: #EF7351;
