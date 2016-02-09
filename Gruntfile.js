@@ -128,14 +128,6 @@ module.exports = function(grunt) {
             }
         },
 
-        uglify: {
-            my_target: {
-                files: {
-                    '<%= config.dist %>/js/momo.min.js': ['<%= config.release %>/js/momo.js']
-                }
-            }
-        },
-
         watch: {
             assemble: {
                 files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml,json}'],
@@ -147,7 +139,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: '<%= config.src %>/js/partials/*.js',
-                tasks: ['concat', 'uglify']
+                tasks: ['concat']
             },
             less: {
                 files: '<%= config.src %>/css/**/*.less',
@@ -176,7 +168,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-handlebars');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-prettify');
 
@@ -193,7 +184,6 @@ module.exports = function(grunt) {
         'cssmin',
         'prettify',
         'concat',
-        'uglify',
         'prettify'
     ]);
 
